@@ -838,12 +838,12 @@ bool QStrategyThread::optionChoose(double underlyingPrice ,time_t _curDateTime,o
   if(this->putScale >0){
 
      optionStyle = optionSpace::OptionType::PUT;
-     _putGreeksValue.price = euroP.price(optionStyle,this->m_callExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
-     _putGreeksValue.delta = euroP.delta(optionStyle,this->m_callExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
-     _putGreeksValue.gamma = euroP.gamma(optionStyle,this->m_callExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
-     _putGreeksValue.vega = euroP.vega(optionStyle,this->m_callExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
-     _putGreeksValue.theta = euroP.theta(optionStyle,this->m_callExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau,1.0/252);
-     _putGreeksValue.rho = euroP.rho(optionStyle,this->m_callExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
+     _putGreeksValue.price = euroP.price(optionStyle,this->m_putExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
+     _putGreeksValue.delta = euroP.delta(optionStyle,this->m_putExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
+     _putGreeksValue.gamma = euroP.gamma(optionStyle,this->m_putExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
+     _putGreeksValue.vega = euroP.vega(optionStyle,this->m_putExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
+     _putGreeksValue.theta = euroP.theta(optionStyle,this->m_putExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau,1.0/252);
+     _putGreeksValue.rho = euroP.rho(optionStyle,this->m_putExerPrice,this->interest,this->dividend,underlyingPrice,this->hedgeVolability,this->m_tau);
  }
   break;
  case 2: // ÑÇÊ½¼ÆËã
@@ -892,12 +892,12 @@ bool QStrategyThread::optionChoose(double underlyingPrice ,time_t _curDateTime,o
 
   }
   if(this->putScale >0){
-     _putGreeksValue.price = ameriPBjs.BSAmericanApprox2002( 'p',underlyingPrice,this->m_callExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
-     _putGreeksValue.delta = ameriPBjs.delta( 'p',underlyingPrice,this->m_callExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
-     _putGreeksValue.gamma = ameriPBjs.gamma( 'p',underlyingPrice,this->m_callExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
-     _putGreeksValue.theta = ameriPBjs.theta( 'p',underlyingPrice,this->m_callExerPrice,m_tau,1/252.0,this->interest,this->dividend,this->hedgeVolability);
-     _putGreeksValue.vega = ameriPBjs.vega( 'p',underlyingPrice,this->m_callExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
-     _putGreeksValue.rho = ameriPBjs.rho( 'p',underlyingPrice,this->m_callExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
+     _putGreeksValue.price = ameriPBjs.BSAmericanApprox2002( 'p',underlyingPrice,this->m_putExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
+     _putGreeksValue.delta = ameriPBjs.delta( 'p',underlyingPrice,this->m_putExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
+     _putGreeksValue.gamma = ameriPBjs.gamma( 'p',underlyingPrice,this->m_putExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
+     _putGreeksValue.theta = ameriPBjs.theta( 'p',underlyingPrice,this->m_putExerPrice,m_tau,1/252.0,this->interest,this->dividend,this->hedgeVolability);
+     _putGreeksValue.vega = ameriPBjs.vega( 'p',underlyingPrice,this->m_putExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
+     _putGreeksValue.rho = ameriPBjs.rho( 'p',underlyingPrice,this->m_putExerPrice,m_tau,this->interest,this->dividend,this->hedgeVolability);
 
  }
   break;
