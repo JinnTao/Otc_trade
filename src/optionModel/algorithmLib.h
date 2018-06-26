@@ -1,12 +1,12 @@
-#pragma    once
-#include    <iostream>
-#include    "structure.h"
+#pragma once
+#include <iostream>
+#include "structure.h"
 
-class    DLL_API_CLASS    algorithmLib
+class DLL_API_CLASS algorithmLib
 {
 public:
-    algorithmLib(void);
-    ~algorithmLib(void);
-    double    N(double    d1,double    mean,double    standardDev);
+ algorithmLib(void);
+ ~algorithmLib(void);
+ double N(double d1,double mean,double standardDev);
 };
 

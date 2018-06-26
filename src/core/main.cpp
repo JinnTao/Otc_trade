@@ -1,8 +1,4 @@
-﻿
-#define ELPP_THREAD_SAFE
-#include "easylogging++.h"
-
-#include "traderqtapp.h"
+﻿#include "traderqtapp.h"
 #include <QtWidgets/QApplication>
 
 #include "logindialog.h"
@@ -18,8 +14,12 @@
 #include <qsemaphore.h>
 #include <qmutex.h>
 
+//#define ELPP_THREAD_SAFE
+#include "easylogging++.h"
 
 INITIALIZE_EASYLOGGINGPP
+
+#define LOG_CONFIG_DIR "easyLog.conf"
 
 HANDLE g_hEvent;
 
@@ -31,23 +31,14 @@ QMap<QString,QAtomicInt > gOrderUnfinished;
 
 QMutex g_mutex;                                                    
 
-int ConfigureLogger() 
-{
-    el::Configurations defaultConf;
-    defaultConf.setToDefault();
-    defaultConf.setGlobally(
-        el::ConfigurationType::Format, "%datetime{%Y/%M/%d %H:%m:%s %g} %level%msg from %func at %loc thread=%thread");
-    el::Loggers::reconfigureLogger("default", defaultConf);
-
-    return 0;
-}
-
 int requestId=0;
 
 int main(int argc, char *argv[])
 {
-    ConfigureLogger();
     int result;
+    el::Configurations conf(LOG_CONFIG_DIR);
+    el::Loggers::reconfigureAllLoggers(conf);
+    LOG(INFO) << "otc trade start ";
     QApplication a(argc, argv);
 
     TraderQtApp w;

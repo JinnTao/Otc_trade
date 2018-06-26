@@ -1,388 +1,388 @@
-<?xml    version="1.0"    encoding="UTF-8"?>
-<ui    version="4.0">
-    <class>TraderQtAppClass</class>
-    <widget    class="QMainWindow"    name="TraderQtAppClass">
-        <property    name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>1172</width>
-                <height>815</height>
-            </rect>
-        </property>
-        <property    name="windowTitle">
-            <string>Auto交易客户端</string>
-        </property>
-        <widget    class="QWidget"    name="centralWidget">
-            <layout    class="QGridLayout"    name="gridLayout">
-                <item    row="0"    column="0"    rowspan="2">
-                    <widget    class="QLabel"    name="label">
-                        <property    name="text">
-                            <string>SearchInst</string>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="1"    rowspan="2">
-                    <widget    class="QLineEdit"    name="instrumentLineEdit">
-                        <property    name="minimumSize">
-                            <size>
-                                <width>221</width>
-                                <height>20</height>
-                            </size>
-                        </property>
-                        <property    name="maximumSize">
-                            <size>
-                                <width>221</width>
-                                <height>20</height>
-                            </size>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="2"    rowspan="2">
-                    <widget    class="QLabel"    name="label_2">
-                        <property    name="text">
-                            <string>账户名</string>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="3"    rowspan="2">
-                    <widget    class="QLabel"    name="accountNameLabel">
-                        <property    name="text">
-                            <string/>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="4"    rowspan="2">
-                    <widget    class="QLabel"    name="staticRightLabel">
-                        <property    name="text">
-                            <string/>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="5"    rowspan="2">
-                    <widget    class="QLabel"    name="closeProfitLabel">
-                        <property    name="text">
-                            <string/>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="6"    rowspan="2">
-                    <widget    class="QLabel"    name="dynamicRightLabel">
-                        <property    name="text">
-                            <string/>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="7"    rowspan="2"    colspan="2">
-                    <widget    class="QLabel"    name="availableFundsLabel">
-                        <property    name="text">
-                            <string/>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="9"    rowspan="2">
-                    <widget    class="QLabel"    name="label_3">
-                        <property    name="text">
-                            <string>RequestSpanTime</string>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="10"    rowspan="2">
-                    <widget    class="QSpinBox"    name="requestTimSpanSpinBox">
-                        <property    name="minimum">
-                            <number>1</number>
-                        </property>
-                        <property    name="maximum">
-                            <number>999</number>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="11"    rowspan="2">
-                    <widget    class="QLabel"    name="label_5">
-                        <property    name="text">
-                            <string>AversionCoefficient</string>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="12"    rowspan="2">
-                    <widget    class="QDoubleSpinBox"    name="aversionCoefficientDSB">
-                        <property    name="value">
-                            <double>0.150000000000000</double>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="0"    column="16"    rowspan="2">
-                    <spacer    name="horizontalSpacer">
-                        <property    name="orientation">
-                            <enum>Qt::Horizontal</enum>
-                        </property>
-                        <property    name="sizeHint"    stdset="0">
-                            <size>
-                                <width>140</width>
-                                <height>17</height>
-                            </size>
-                        </property>
-                    </spacer>
-                </item>
-                <item    row="1"    column="8">
-                    <widget    class="QCheckBox"    name="allowTradeCheckBox">
-                        <property    name="text">
-                            <string>AllowTrade</string>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="1"    column="13">
-                    <widget    class="QRadioButton"    name="radioButtonFix">
-                        <property    name="text">
-                            <string>固定时间对冲</string>
-                        </property>
-                        <attribute    name="buttonGroup">
-                            <string    notr="true">buttonGroup</string>
-                        </attribute>
-                    </widget>
-                </item>
-                <item    row="1"    column="14">
-                    <widget    class="QRadioButton"    name="radioButtonWW">
-                        <property    name="text">
-                            <string>WW</string>
-                        </property>
-                        <attribute    name="buttonGroup">
-                            <string    notr="true">buttonGroup</string>
-                        </attribute>
-                    </widget>
-                </item>
-                <item    row="1"    column="15">
-                    <widget    class="QRadioButton"    name="radioButtonZak">
-                        <property    name="text">
-                            <string>Zak</string>
-                        </property>
-                        <attribute    name="buttonGroup">
-                            <string    notr="true">buttonGroup</string>
-                        </attribute>
-                    </widget>
-                </item>
-                <item    row="2"    column="0"    colspan="17">
-                    <widget    class="QTableView"    name="quoteTableView">
-                        <property    name="sizePolicy">
-                            <sizepolicy    hsizetype="Expanding"    vsizetype="Expanding">
-                                <horstretch>0</horstretch>
-                                <verstretch>0</verstretch>
-                            </sizepolicy>
-                        </property>
-                        <property    name="minimumSize">
-                            <size>
-                                <width>1120</width>
-                                <height>280</height>
-                            </size>
-                        </property>
-                        <property    name="styleSheet">
-                            <string    notr="true">QTableView
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TraderQtAppClass</class>
+ <widget class="QMainWindow" name="TraderQtAppClass">
+  <property name="geometry">
+   <rect>
+ <x>0</x>
+ <y>0</y>
+ <width>1172</width>
+ <height>815</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Auto交易客户端</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+ <item row="0" column="0" rowspan="2">
+  <widget class="QLabel" name="label">
+   <property name="text">
+    <string>SearchInst</string>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="1" rowspan="2">
+  <widget class="QLineEdit" name="instrumentLineEdit">
+   <property name="minimumSize">
+    <size>
+  <width>221</width>
+  <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+  <width>221</width>
+  <height>20</height>
+    </size>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="2" rowspan="2">
+  <widget class="QLabel" name="label_2">
+   <property name="text">
+    <string>账户名</string>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="3" rowspan="2">
+  <widget class="QLabel" name="accountNameLabel">
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="4" rowspan="2">
+  <widget class="QLabel" name="staticRightLabel">
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="5" rowspan="2">
+  <widget class="QLabel" name="closeProfitLabel">
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="6" rowspan="2">
+  <widget class="QLabel" name="dynamicRightLabel">
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="7" rowspan="2" colspan="2">
+  <widget class="QLabel" name="availableFundsLabel">
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="9" rowspan="2">
+  <widget class="QLabel" name="label_3">
+   <property name="text">
+    <string>RequestSpanTime</string>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="10" rowspan="2">
+  <widget class="QSpinBox" name="requestTimSpanSpinBox">
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>999</number>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="11" rowspan="2">
+  <widget class="QLabel" name="label_5">
+   <property name="text">
+    <string>AversionCoefficient</string>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="12" rowspan="2">
+  <widget class="QDoubleSpinBox" name="aversionCoefficientDSB">
+   <property name="value">
+    <double>0.150000000000000</double>
+   </property>
+  </widget>
+ </item>
+ <item row="0" column="16" rowspan="2">
+  <spacer name="horizontalSpacer">
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="sizeHint" stdset="0">
+    <size>
+  <width>140</width>
+  <height>17</height>
+    </size>
+   </property>
+  </spacer>
+ </item>
+ <item row="1" column="8">
+  <widget class="QCheckBox" name="allowTradeCheckBox">
+   <property name="text">
+    <string>AllowTrade</string>
+   </property>
+  </widget>
+ </item>
+ <item row="1" column="13">
+  <widget class="QRadioButton" name="radioButtonFix">
+   <property name="text">
+    <string>固定时间对冲</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup</string>
+   </attribute>
+  </widget>
+ </item>
+ <item row="1" column="14">
+  <widget class="QRadioButton" name="radioButtonWW">
+   <property name="text">
+    <string>WW</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup</string>
+   </attribute>
+  </widget>
+ </item>
+ <item row="1" column="15">
+  <widget class="QRadioButton" name="radioButtonZak">
+   <property name="text">
+    <string>Zak</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">buttonGroup</string>
+   </attribute>
+  </widget>
+ </item>
+ <item row="2" column="0" colspan="17">
+  <widget class="QTableView" name="quoteTableView">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+  <horstretch>0</horstretch>
+  <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+  <width>1120</width>
+  <height>280</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableView
 
 {
-background-color:rgb(255,    255,    255);
+background-color:rgb(255, 255, 255);
 
 
 }
 
-QHeaderView    {
-background-color:rgb(255,    255,    255);
+QHeaderView {
+background-color:rgb(255, 255, 255);
 }</string>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="3"    column="0"    colspan="17">
-                    <layout    class="QHBoxLayout"    name="horizontalLayout_2">
-                        <item>
-                            <widget    class="QPushButton"    name="newStrategyProduct">
-                                <property    name="text">
-                                    <string>新建</string>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget    class="QPushButton"    name="runStrategyButton">
-                                <property    name="text">
-                                    <string>运行</string>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget    class="QPushButton"    name="stopStrategyButton">
-                                <property    name="text">
-                                    <string>停止</string>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget    class="QPushButton"    name="delStrategyButton">
-                                <property    name="text">
-                                    <string>删除</string>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget    class="QPushButton"    name="updateStrategyButton">
-                                <property    name="text">
-                                    <string>刷新TradeValue</string>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget    class="QPushButton"    name="freshTradeParameterButton">
-                                <property    name="text">
-                                    <string>更新booK状态</string>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget    class="QPushButton"    name="settleStrategyButton">
-                                <property    name="text">
-                                    <string>结算</string>
-                                </property>
-                            </widget>
-                        </item>
-                    </layout>
-                </item>
-                <item    row="4"    column="0"    colspan="17">
-                    <widget    class="QTableView"    name="strategyProductTableView">
-                        <property    name="sizePolicy">
-                            <sizepolicy    hsizetype="Expanding"    vsizetype="Expanding">
-                                <horstretch>0</horstretch>
-                                <verstretch>0</verstretch>
-                            </sizepolicy>
-                        </property>
-                        <property    name="minimumSize">
-                            <size>
-                                <width>1120</width>
-                                <height>192</height>
-                            </size>
-                        </property>
-                        <property    name="toolTip">
-                            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p    align=&quot;justify&quot;&gt;312321312&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                        </property>
-                        <property    name="styleSheet">
-                            <string    notr="true">QTableView
-
-{
-background-color:rgb(255,    255,    255);
-
-
-}
-
-QHeaderView    {
-background-color:rgb(255,    255,    255);
-}</string>
-                        </property>
-                    </widget>
-                </item>
-                <item    row="5"    column="0"    colspan="17">
-                    <layout    class="QHBoxLayout"    name="horizontalLayout">
-                        <property    name="spacing">
-                            <number>1</number>
-                        </property>
-                        <item>
-                            <widget    class="QTableView"    name="positionListTableView">
-                                <property    name="minimumSize">
-                                    <size>
-                                        <width>780</width>
-                                        <height>0</height>
-                                    </size>
-                                </property>
-                                <property    name="styleSheet">
-                                    <string    notr="true">QTableView
-
-{
-background-color:rgb(255,    255,    255);
-
-
-}
-
-QHeaderView    {
-background-color:rgb(255,    255,    255);
-}</string>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget    class="QTableView"    name="orderManageTableView">
-                                <property    name="maximumSize">
-                                    <size>
-                                        <width>1024</width>
-                                        <height>16777215</height>
-                                    </size>
-                                </property>
-                            </widget>
-                        </item>
-                        <item>
-                            <widget    class="QTextBrowser"    name="textBrowser">
-                                <property    name="maximumSize">
-                                    <size>
-                                        <width>700</width>
-                                        <height>16777215</height>
-                                    </size>
-                                </property>
-                                <property    name="styleSheet">
-                                    <string    notr="true">QTextBrowser{
-
-background-color:rgb(255,    255,    255);
-}</string>
-                                </property>
-                            </widget>
-                        </item>
-                    </layout>
-                </item>
-            </layout>
-        </widget>
-        <widget    class="QMenuBar"    name="menuBar">
-            <property    name="geometry">
-                <rect>
-                    <x>0</x>
-                    <y>0</y>
-                    <width>1172</width>
-                    <height>23</height>
-                </rect>
-            </property>
-            <widget    class="QMenu"    name="menu">
-                <property    name="title">
-                    <string>系统</string>
-                </property>
-                <addaction    name="action123"/>
-            </widget>
-            <widget    class="QMenu"    name="menu_2">
-                <property    name="title">
-                    <string>帮助</string>
-                </property>
-                <addaction    name="actionAbout"/>
-            </widget>
-            <addaction    name="menu"/>
-            <addaction    name="menu_2"/>
-        </widget>
-        <widget    class="QToolBar"    name="mainToolBar">
-            <attribute    name="toolBarArea">
-                <enum>TopToolBarArea</enum>
-            </attribute>
-            <attribute    name="toolBarBreak">
-                <bool>false</bool>
-            </attribute>
-        </widget>
-        <widget    class="QStatusBar"    name="statusBar"/>
-        <action    name="action123">
-            <property    name="text">
-                <string>Exit</string>
-            </property>
-        </action>
-        <action    name="actionAbout">
-            <property    name="text">
-                <string>About</string>
-            </property>
-        </action>
+   </property>
+  </widget>
+ </item>
+ <item row="3" column="0" colspan="17">
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="QPushButton" name="newStrategyProduct">
+  <property name="text">
+   <string>新建</string>
+  </property>
     </widget>
-    <layoutdefault    spacing="6"    margin="11"/>
-    <resources>
-        <include    location="traderqtapp.qrc"/>
-    </resources>
-    <connections/>
-    <buttongroups>
-        <buttongroup    name="buttonGroup"/>
-    </buttongroups>
+   </item>
+   <item>
+    <widget class="QPushButton" name="runStrategyButton">
+  <property name="text">
+   <string>运行</string>
+  </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="stopStrategyButton">
+  <property name="text">
+   <string>停止</string>
+  </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="delStrategyButton">
+  <property name="text">
+   <string>自动勾选存续</string>
+  </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="updateStrategyButton">
+  <property name="text">
+   <string>刷新TradeValue</string>
+  </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="freshTradeParameterButton">
+  <property name="text">
+   <string>更新booK状态</string>
+  </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="settleStrategyButton">
+  <property name="text">
+   <string>结算</string>
+  </property>
+    </widget>
+   </item>
+  </layout>
+ </item>
+ <item row="4" column="0" colspan="17">
+  <widget class="QTableView" name="strategyProductTableView">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+  <horstretch>0</horstretch>
+  <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+  <width>1120</width>
+  <height>192</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;312321312&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableView
+
+{
+background-color:rgb(255, 255, 255);
+
+
+}
+
+QHeaderView {
+background-color:rgb(255, 255, 255);
+}</string>
+   </property>
+  </widget>
+ </item>
+ <item row="5" column="0" colspan="17">
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <item>
+    <widget class="QTableView" name="positionListTableView">
+  <property name="minimumSize">
+   <size>
+    <width>780</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTableView
+
+{
+background-color:rgb(255, 255, 255);
+
+
+}
+
+QHeaderView {
+background-color:rgb(255, 255, 255);
+}</string>
+  </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableView" name="orderManageTableView">
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>16777215</height>
+   </size>
+  </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextBrowser" name="textBrowser">
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QTextBrowser{
+
+background-color:rgb(255, 255, 255);
+}</string>
+  </property>
+    </widget>
+   </item>
+  </layout>
+ </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+ <rect>
+  <x>0</x>
+  <y>0</y>
+  <width>1172</width>
+  <height>23</height>
+ </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+ <property name="title">
+  <string>系统</string>
+ </property>
+ <addaction name="action123"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+ <property name="title">
+  <string>帮助</string>
+ </property>
+ <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+ <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+ <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action123">
+   <property name="text">
+ <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+ <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="traderqtapp.qrc"/>
+ </resources>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
 </ui>

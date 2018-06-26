@@ -1,2326 +1,2326 @@
-<?xml    version="1.0"    encoding="UTF-8"?>
-<ui    version="4.0">
-    <class>QStrategy</class>
-    <widget    class="QWidget"    name="QStrategy">
-        <property    name="geometry">
-            <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>925</width>
-                <height>839</height>
-            </rect>
-        </property>
-        <property    name="windowTitle">
-            <string>新建交易</string>
-        </property>
-        <widget    class="QLineEdit"    name="callExecPricePercentLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>137</x>
-                    <y>171</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_7">
-            <property    name="geometry">
-                <rect>
-                    <x>590</x>
-                    <y>59</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>期权到期日</string>
-            </property>
-        </widget>
-        <widget    class="QPushButton"    name="cancle">
-            <property    name="geometry">
-                <rect>
-                    <x>546</x>
-                    <y>800</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>取消</string>
-            </property>
-        </widget>
-        <widget    class="QPushButton"    name="save">
-            <property    name="geometry">
-                <rect>
-                    <x>246</x>
-                    <y>800</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>保存</string>
-            </property>
-        </widget>
-        <widget    class="QComboBox"    name="typeComboBox">
-            <property    name="geometry">
-                <rect>
-                    <x>140</x>
-                    <y>59</y>
-                    <width>60</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <item>
-                <property    name="text">
-                    <string>欧式</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>美式</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>亚式</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>障碍</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>二值</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>回望</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>远期</string>
-                </property>
-            </item>
-        </widget>
-        <widget    class="QTimeEdit"    name="carryNoonTimeEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>478</x>
-                    <y>507</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QTimeEdit"    name="carryNightTimeEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>478</x>
-                    <y>550</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_10">
-            <property    name="geometry">
-                <rect>
-                    <x>31</x>
-                    <y>171</y>
-                    <width>91</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>看涨执行价</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_27">
-            <property    name="geometry">
-                <rect>
-                    <x>20</x>
-                    <y>550</y>
-                    <width>421</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="styleSheet">
-                <string    notr="true">QLabel{
-color:rgb(170,    0,    127);
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QStrategy</class>
+ <widget class="QWidget" name="QStrategy">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>925</width>
+    <height>839</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>新建交易</string>
+  </property>
+  <widget class="QLineEdit" name="callExecPricePercentLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>137</x>
+     <y>171</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>59</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>期权到期日</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancle">
+   <property name="geometry">
+    <rect>
+     <x>546</x>
+     <y>800</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save">
+   <property name="geometry">
+    <rect>
+     <x>246</x>
+     <y>800</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>保存</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="typeComboBox">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>59</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>欧式</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>美式</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>亚式</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>障碍</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>二值</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>回望</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>远期</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QTimeEdit" name="carryNoonTimeEdit">
+   <property name="geometry">
+    <rect>
+     <x>478</x>
+     <y>507</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="carryNightTimeEdit">
+   <property name="geometry">
+    <rect>
+     <x>478</x>
+     <y>550</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>171</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>看涨执行价</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_27">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>550</y>
+     <width>421</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:rgb(170, 0, 127);
 }</string>
-            </property>
-            <property    name="text">
-                <string>Carry    Nigth    Theta    Time        夜盘收盘后的carryTheta开始时间与carry时间长度</string>
-            </property>
-        </widget>
-        <widget    class="QTimeEdit"    name="startTimeEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>154</x>
-                    <y>461</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="putScaleLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>490</x>
-                    <y>131</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="hedgeVolLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>139</x>
-                    <y>290</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="yieldLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>439</x>
-                    <y>209</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_8">
-            <property    name="geometry">
-                <rect>
-                    <x>31</x>
-                    <y>211</y>
-                    <width>101</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>期初/远期执行价</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_21">
-            <property    name="geometry">
-                <rect>
-                    <x>596</x>
-                    <y>210</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>最大报单数量（手）</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="productNameLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>160</x>
-                    <y>20</y>
-                    <width>591</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>0</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_14">
-            <property    name="geometry">
-                <rect>
-                    <x>30</x>
-                    <y>420</y>
-                    <width>80</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>80</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>80</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约价值</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_26">
-            <property    name="geometry">
-                <rect>
-                    <x>28</x>
-                    <y>507</y>
-                    <width>431</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="styleSheet">
-                <string    notr="true">QLabel{
-color:rgb(170,    0,    127);
+   </property>
+   <property name="text">
+    <string>Carry Nigth Theta Time  夜盘收盘后的carryTheta开始时间与carry时间长度</string>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="startTimeEdit">
+   <property name="geometry">
+    <rect>
+     <x>154</x>
+     <y>461</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="putScaleLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>131</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="hedgeVolLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>139</x>
+     <y>290</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="yieldLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>439</x>
+     <y>209</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>211</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>期初/远期执行价</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_21">
+   <property name="geometry">
+    <rect>
+     <x>596</x>
+     <y>210</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>最大报单数量（手）</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="productNameLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>20</y>
+     <width>591</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>420</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约价值</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_26">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>507</y>
+     <width>431</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:rgb(170, 0, 127);
 }</string>
-            </property>
-            <property    name="text">
-                <string>Carry    Noon    Theate    Time        每日收盘后的carryTheta开始时间与carry时间长度</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_29">
-            <property    name="geometry">
-                <rect>
-                    <x>730</x>
-                    <y>550</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>分钟</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_3">
-            <property    name="geometry">
-                <rect>
-                    <x>738</x>
-                    <y>131</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>规模单位</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_2">
-            <property    name="geometry">
-                <rect>
-                    <x>34</x>
-                    <y>59</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>期权种类</string>
-            </property>
-        </widget>
-        <widget    class="QSpinBox"    name="carryNightDistanceSpinBox">
-            <property    name="geometry">
-                <rect>
-                    <x>604</x>
-                    <y>550</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="rateLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>137</x>
-                    <y>249</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_6">
-            <property    name="geometry">
-                <rect>
-                    <x>232</x>
-                    <y>59</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>期权发行期</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="averagePriceLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>720</x>
-                    <y>250</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QComboBox"    name="scaleUnitComboBox">
-            <property    name="geometry">
-                <rect>
-                    <x>822</x>
-                    <y>131</y>
-                    <width>38</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <item>
-                <property    name="text">
-                    <string>元</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>吨</string>
-                </property>
-            </item>
-        </widget>
-        <widget    class="QSpinBox"    name="carryNoonDistanceSpinBox">
-            <property    name="geometry">
-                <rect>
-                    <x>604</x>
-                    <y>507</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_5">
-            <property    name="geometry">
-                <rect>
-                    <x>390</x>
-                    <y>131</y>
-                    <width>91</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>看跌规模</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_19">
-            <property    name="geometry">
-                <rect>
-                    <x>33</x>
-                    <y>290</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="font">
-                <font>
-                    <underline>false</underline>
-                </font>
-            </property>
-            <property    name="styleSheet">
-                <string    notr="true">QLabel{
-color:rgb(170,    0,    127);
+   </property>
+   <property name="text">
+    <string>Carry Noon Theate Time  每日收盘后的carryTheta开始时间与carry时间长度</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_29">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>550</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>分钟</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>738</x>
+     <y>131</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>规模单位</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>34</x>
+     <y>59</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>期权种类</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="carryNightDistanceSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>604</x>
+     <y>550</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="rateLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>137</x>
+     <y>249</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>232</x>
+     <y>59</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>期权发行期</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="averagePriceLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>250</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="scaleUnitComboBox">
+   <property name="geometry">
+    <rect>
+     <x>822</x>
+     <y>131</y>
+     <width>38</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>元</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>吨</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QSpinBox" name="carryNoonDistanceSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>604</x>
+     <y>507</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>131</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>看跌规模</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_19">
+   <property name="geometry">
+    <rect>
+     <x>33</x>
+     <y>290</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:rgb(170, 0, 127);
 }</string>
-            </property>
-            <property    name="text">
-                <string>对冲波动率</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_12">
-            <property    name="geometry">
-                <rect>
-                    <x>313</x>
-                    <y>209</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>持有成本</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="callScaleLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>138</x>
-                    <y>131</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_11">
-            <property    name="geometry">
-                <rect>
-                    <x>31</x>
-                    <y>249</y>
-                    <width>91</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>利率</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="barrierLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>436</x>
-                    <y>249</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_4">
-            <property    name="geometry">
-                <rect>
-                    <x>32</x>
-                    <y>131</y>
-                    <width>81</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>看涨规模</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_30">
-            <property    name="geometry">
-                <rect>
-                    <x>30</x>
-                    <y>590</y>
-                    <width>801</width>
-                    <height>21</height>
-                </rect>
-            </property>
-            <property    name="text">
-                <string>备注：一个合约仅能跑一个策略，如果一个合约要同时运行两个策略，请考虑使用其他帐号登录。</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_13">
-            <property    name="geometry">
-                <rect>
-                    <x>310</x>
-                    <y>249</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>障碍值</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label">
-            <property    name="geometry">
-                <rect>
-                    <x>34</x>
-                    <y>16</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>本子名称</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="initialPriceLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>137</x>
-                    <y>211</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_20">
-            <property    name="geometry">
-                <rect>
-                    <x>28</x>
-                    <y>461</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="styleSheet">
-                <string    notr="true"/>
-            </property>
-            <property    name="text">
-                <string>每日结算时间点</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_28">
-            <property    name="geometry">
-                <rect>
-                    <x>730</x>
-                    <y>507</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>分钟</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_9">
-            <property    name="geometry">
-                <rect>
-                    <x>600</x>
-                    <y>250</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>标的均价</string>
-            </property>
-        </widget>
-        <widget    class="QDateTimeEdit"    name="settlementDateEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>320</x>
-                    <y>60</y>
-                    <width>194</width>
-                    <height>22</height>
-                </rect>
-            </property>
-        </widget>
-        <widget    class="QDateTimeEdit"    name="maturityDateEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>680</x>
-                    <y>60</y>
-                    <width>194</width>
-                    <height>22</height>
-                </rect>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="openNumsLineBox">
-            <property    name="geometry">
-                <rect>
-                    <x>720</x>
-                    <y>210</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="instrumentCodeLineEdit">
-            <property    name="enabled">
-                <bool>true</bool>
-            </property>
-            <property    name="geometry">
-                <rect>
-                    <x>90</x>
-                    <y>340</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_31">
-            <property    name="geometry">
-                <rect>
-                    <x>30</x>
-                    <y>340</y>
-                    <width>31</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约1</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="tipsLabel">
-            <property    name="geometry">
-                <rect>
-                    <x>20</x>
-                    <y>620</y>
-                    <width>801</width>
-                    <height>21</height>
-                </rect>
-            </property>
-            <property    name="text">
-                <string/>
-            </property>
-        </widget>
-        <widget    class="QComboBox"    name="callTypeComboBox">
-            <property    name="geometry">
-                <rect>
-                    <x>290</x>
-                    <y>131</y>
-                    <width>50</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <item>
-                <property    name="text">
-                    <string>多头</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>空头</string>
-                </property>
-            </item>
-        </widget>
-        <widget    class="QComboBox"    name="putTypeComboBox">
-            <property    name="geometry">
-                <rect>
-                    <x>640</x>
-                    <y>131</y>
-                    <width>50</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <item>
-                <property    name="text">
-                    <string>多头</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>空头</string>
-                </property>
-            </item>
-        </widget>
-        <widget    class="QLabel"    name="label_15">
-            <property    name="geometry">
-                <rect>
-                    <x>390</x>
-                    <y>171</y>
-                    <width>71</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>看跌执行价</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="putExecPricePercentLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>490</x>
-                    <y>171</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="instrumentCodeLineEdit_2">
-            <property    name="enabled">
-                <bool>true</bool>
-            </property>
-            <property    name="geometry">
-                <rect>
-                    <x>300</x>
-                    <y>340</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_32">
-            <property    name="geometry">
-                <rect>
-                    <x>240</x>
-                    <y>340</y>
-                    <width>41</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约2</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="instrumentCodeLineEdit_3">
-            <property    name="enabled">
-                <bool>true</bool>
-            </property>
-            <property    name="geometry">
-                <rect>
-                    <x>520</x>
-                    <y>340</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_33">
-            <property    name="geometry">
-                <rect>
-                    <x>460</x>
-                    <y>340</y>
-                    <width>41</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约3</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_34">
-            <property    name="geometry">
-                <rect>
-                    <x>680</x>
-                    <y>340</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约4</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="instrumentCodeLineEdit_4">
-            <property    name="enabled">
-                <bool>true</bool>
-            </property>
-            <property    name="geometry">
-                <rect>
-                    <x>740</x>
-                    <y>340</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_35">
-            <property    name="geometry">
-                <rect>
-                    <x>460</x>
-                    <y>380</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约3比例</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_36">
-            <property    name="geometry">
-                <rect>
-                    <x>680</x>
-                    <y>380</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约4比例</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_37">
-            <property    name="geometry">
-                <rect>
-                    <x>240</x>
-                    <y>380</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约2比例</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_38">
-            <property    name="geometry">
-                <rect>
-                    <x>30</x>
-                    <y>380</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约1比例</string>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="InstrumentRatioSpinBox">
-            <property    name="geometry">
-                <rect>
-                    <x>90</x>
-                    <y>380</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>3</number>
-            </property>
-            <property    name="minimum">
-                <double>-99.000000000000000</double>
-            </property>
-            <property    name="maximum">
-                <double>99.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.001000000000000</double>
-            </property>
-            <property    name="value">
-                <double>1.000000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="InstrumentRatioSpinBox_2">
-            <property    name="geometry">
-                <rect>
-                    <x>300</x>
-                    <y>380</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>3</number>
-            </property>
-            <property    name="minimum">
-                <double>-99.000000000000000</double>
-            </property>
-            <property    name="maximum">
-                <double>99.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.001000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="InstrumentRatioSpinBox_3">
-            <property    name="geometry">
-                <rect>
-                    <x>520</x>
-                    <y>380</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>3</number>
-            </property>
-            <property    name="minimum">
-                <double>-99.000000000000000</double>
-            </property>
-            <property    name="maximum">
-                <double>99.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.001000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="InstrumentRatioSpinBox_4">
-            <property    name="geometry">
-                <rect>
-                    <x>740</x>
-                    <y>380</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>3</number>
-            </property>
-            <property    name="minimum">
-                <double>-99.000000000000000</double>
-            </property>
-            <property    name="maximum">
-                <double>99.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.001000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_22">
-            <property    name="geometry">
-                <rect>
-                    <x>314</x>
-                    <y>290</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="font">
-                <font>
-                    <underline>false</underline>
-                </font>
-            </property>
-            <property    name="styleSheet">
-                <string    notr="true">QLabel{
-color:rgb(170,    0,    127);
+   </property>
+   <property name="text">
+    <string>对冲波动率</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>313</x>
+     <y>209</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>持有成本</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="callScaleLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>131</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>249</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>利率</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="barrierLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>436</x>
+     <y>249</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>32</x>
+     <y>131</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>看涨规模</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_30">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>590</y>
+     <width>801</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>备注：一个合约仅能跑一个策略，如果一个合约要同时运行两个策略，请考虑使用其他帐号登录。</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>249</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>障碍值</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>34</x>
+     <y>16</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>本子名称</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="initialPriceLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>137</x>
+     <y>211</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_20">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>461</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>每日结算时间点</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_28">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>507</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>分钟</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>250</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>标的均价</string>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="settlementDateEdit">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>60</y>
+     <width>194</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="maturityDateEdit">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>60</y>
+     <width>194</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="openNumsLineBox">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>210</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="instrumentCodeLineEdit">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>340</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_31">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>340</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="tipsLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>620</y>
+     <width>801</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="callTypeComboBox">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>131</y>
+     <width>50</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>多头</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>空头</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="putTypeComboBox">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>131</y>
+     <width>50</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>多头</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>空头</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>171</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>看跌执行价</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="putExecPricePercentLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>171</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="instrumentCodeLineEdit_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>340</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_32">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>340</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约2</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="instrumentCodeLineEdit_3">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>340</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_33">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>340</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_34">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>340</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约4</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="instrumentCodeLineEdit_4">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>340</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_35">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>380</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约3比例</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_36">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>380</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约4比例</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_37">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>380</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约2比例</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_38">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>380</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约1比例</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="InstrumentRatioSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>380</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>-99.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>99.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+   <property name="value">
+    <double>1.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="InstrumentRatioSpinBox_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>380</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>-99.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>99.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="InstrumentRatioSpinBox_3">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>380</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>-99.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>99.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="InstrumentRatioSpinBox_4">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>380</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>-99.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>99.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_22">
+   <property name="geometry">
+    <rect>
+     <x>314</x>
+     <y>290</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+color:rgb(170, 0, 127);
 }</string>
-            </property>
-            <property    name="text">
-                <string>对冲阈值</string>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="tickValue">
-            <property    name="geometry">
-                <rect>
-                    <x>90</x>
-                    <y>420</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>2</number>
-            </property>
-            <property    name="maximum">
-                <double>1000.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.010000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="tickValue_2">
-            <property    name="geometry">
-                <rect>
-                    <x>300</x>
-                    <y>420</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>2</number>
-            </property>
-            <property    name="maximum">
-                <double>1000.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.010000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="tickValue_3">
-            <property    name="geometry">
-                <rect>
-                    <x>520</x>
-                    <y>420</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>2</number>
-            </property>
-            <property    name="maximum">
-                <double>1000.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.010000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="tickValue_4">
-            <property    name="geometry">
-                <rect>
-                    <x>740</x>
-                    <y>420</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>2</number>
-            </property>
-            <property    name="maximum">
-                <double>1000.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.010000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_23">
-            <property    name="geometry">
-                <rect>
-                    <x>240</x>
-                    <y>420</y>
-                    <width>80</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>80</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>80</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约价值</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_24">
-            <property    name="geometry">
-                <rect>
-                    <x>460</x>
-                    <y>420</y>
-                    <width>80</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>80</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>80</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约价值</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_39">
-            <property    name="geometry">
-                <rect>
-                    <x>680</x>
-                    <y>420</y>
-                    <width>80</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>80</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>80</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>合约价值</string>
-            </property>
-        </widget>
-        <widget    class="QSpinBox"    name="hedgeThresHoldSpinBox">
-            <property    name="geometry">
-                <rect>
-                    <x>440</x>
-                    <y>290</y>
-                    <width>42</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="maximum">
-                <number>9999</number>
-            </property>
-            <property    name="displayIntegerBase">
-                <number>10</number>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_40">
-            <property    name="geometry">
-                <rect>
-                    <x>724</x>
-                    <y>290</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="font">
-                <font>
-                    <underline>false</underline>
-                </font>
-            </property>
-            <property    name="styleSheet">
-                <string    notr="true"/>
-            </property>
-            <property    name="text">
-                <string>已经计算均值点</string>
-            </property>
-        </widget>
-        <widget    class="QSpinBox"    name="averagedPoint">
-            <property    name="geometry">
-                <rect>
-                    <x>850</x>
-                    <y>290</y>
-                    <width>42</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="maximum">
-                <number>9999</number>
-            </property>
-            <property    name="displayIntegerBase">
-                <number>10</number>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_41">
-            <property    name="geometry">
-                <rect>
-                    <x>514</x>
-                    <y>290</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="font">
-                <font>
-                    <underline>false</underline>
-                </font>
-            </property>
-            <property    name="styleSheet">
-                <string    notr="true"/>
-            </property>
-            <property    name="text">
-                <string>合计均值点</string>
-            </property>
-        </widget>
-        <widget    class="QSpinBox"    name="totalAveragePoint">
-            <property    name="geometry">
-                <rect>
-                    <x>640</x>
-                    <y>290</y>
-                    <width>42</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="maximum">
-                <number>9999</number>
-            </property>
-            <property    name="displayIntegerBase">
-                <number>10</number>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_16">
-            <property    name="geometry">
-                <rect>
-                    <x>202</x>
-                    <y>90</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>FirstAveragePoint</string>
-            </property>
-        </widget>
-        <widget    class="QDateTimeEdit"    name="firstApointDateEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>320</x>
-                    <y>91</y>
-                    <width>194</width>
-                    <height>22</height>
-                </rect>
-            </property>
-        </widget>
-        <widget    class="QPushButton"    name="onSearchPushButton">
-            <property    name="geometry">
-                <rect>
-                    <x>800</x>
-                    <y>20</y>
-                    <width>75</width>
-                    <height>21</height>
-                </rect>
-            </property>
-            <property    name="text">
-                <string>查询</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_17">
-            <property    name="geometry">
-                <rect>
-                    <x>562</x>
-                    <y>90</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>nextAverageTime</string>
-            </property>
-        </widget>
-        <widget    class="QDateTimeEdit"    name="nextApointDateEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>680</x>
-                    <y>91</y>
-                    <width>194</width>
-                    <height>22</height>
-                </rect>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_42">
-            <property    name="geometry">
-                <rect>
-                    <x>320</x>
-                    <y>460</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>交易成本(%)</string>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="TradeCostDSpinBox">
-            <property    name="geometry">
-                <rect>
-                    <x>410</x>
-                    <y>460</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>3</number>
-            </property>
-            <property    name="minimum">
-                <double>-99.000000000000000</double>
-            </property>
-            <property    name="maximum">
-                <double>99.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.001000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QDoubleSpinBox"    name="riskAversionDSpinBox">
-            <property    name="geometry">
-                <rect>
-                    <x>600</x>
-                    <y>460</y>
-                    <width>62</width>
-                    <height>22</height>
-                </rect>
-            </property>
-            <property    name="decimals">
-                <number>3</number>
-            </property>
-            <property    name="minimum">
-                <double>-99.000000000000000</double>
-            </property>
-            <property    name="maximum">
-                <double>99.000000000000000</double>
-            </property>
-            <property    name="singleStep">
-                <double>0.001000000000000</double>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_43">
-            <property    name="geometry">
-                <rect>
-                    <x>510</x>
-                    <y>460</y>
-                    <width>120</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>风险厌恶系数</string>
-            </property>
-        </widget>
-        <widget    class="QComboBox"    name="statusComboBox">
-            <property    name="geometry">
-                <rect>
-                    <x>140</x>
-                    <y>660</y>
-                    <width>60</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <item>
-                <property    name="text">
-                    <string>存续</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>已到期</string>
-                </property>
-            </item>
-            <item>
-                <property    name="text">
-                    <string>已平仓</string>
-                </property>
-            </item>
-        </widget>
-        <widget    class="QLabel"    name="label_46">
-            <property    name="geometry">
-                <rect>
-                    <x>30</x>
-                    <y>720</y>
-                    <width>81</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>产品交付日</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="counterpartyLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>410</x>
-                    <y>690</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="deliveryPriceLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>660</x>
-                    <y>690</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QDateTimeEdit"    name="paymentDateEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>140</x>
-                    <y>720</y>
-                    <width>194</width>
-                    <height>22</height>
-                </rect>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_48">
-            <property    name="geometry">
-                <rect>
-                    <x>620</x>
-                    <y>720</y>
-                    <width>71</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>PresentValue</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="TradeValueLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>460</x>
-                    <y>720</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_25">
-            <property    name="geometry">
-                <rect>
-                    <x>310</x>
-                    <y>690</y>
-                    <width>71</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>交易对手</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="PresentValueEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>710</x>
-                    <y>720</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string/>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_45">
-            <property    name="geometry">
-                <rect>
-                    <x>30</x>
-                    <y>660</y>
-                    <width>71</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>当前状态</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_47">
-            <property    name="geometry">
-                <rect>
-                    <x>390</x>
-                    <y>720</y>
-                    <width>61</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>TradeValue</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_44">
-            <property    name="geometry">
-                <rect>
-                    <x>600</x>
-                    <y>690</y>
-                    <width>51</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>交割价</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="optionFeeLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>140</x>
-                    <y>690</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </widget>
-        <widget    class="QPushButton"    name="onSettlePushButton">
-            <property    name="geometry">
-                <rect>
-                    <x>830</x>
-                    <y>620</y>
-                    <width>75</width>
-                    <height>21</height>
-                </rect>
-            </property>
-            <property    name="text">
-                <string>结算</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_18">
-            <property    name="geometry">
-                <rect>
-                    <x>30</x>
-                    <y>690</y>
-                    <width>91</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>期权费(单价)</string>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_49">
-            <property    name="geometry">
-                <rect>
-                    <x>240</x>
-                    <y>660</y>
-                    <width>51</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>P&amp;L</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="PNLLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>300</x>
-                    <y>660</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string/>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_50">
-            <property    name="geometry">
-                <rect>
-                    <x>470</x>
-                    <y>660</y>
-                    <width>61</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>当日结算价</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="settlePriceLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>540</x>
-                    <y>660</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string/>
-            </property>
-        </widget>
-        <widget    class="QDateTimeEdit"    name="deliveryDateEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>140</x>
-                    <y>750</y>
-                    <width>194</width>
-                    <height>22</height>
-                </rect>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_51">
-            <property    name="geometry">
-                <rect>
-                    <x>30</x>
-                    <y>750</y>
-                    <width>81</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>产品交割日</string>
-            </property>
-        </widget>
-        <widget    class="QDateTimeEdit"    name="terminateDateEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>500</x>
-                    <y>750</y>
-                    <width>194</width>
-                    <height>22</height>
-                </rect>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_52">
-            <property    name="geometry">
-                <rect>
-                    <x>390</x>
-                    <y>750</y>
-                    <width>81</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>产品终止日</string>
-            </property>
-        </widget>
-        <widget    class="QLineEdit"    name="returnProfitLineEdit">
-            <property    name="geometry">
-                <rect>
-                    <x>760</x>
-                    <y>660</y>
-                    <width>140</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="minimumSize">
-                <size>
-                    <width>140</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string/>
-            </property>
-        </widget>
-        <widget    class="QLabel"    name="label_53">
-            <property    name="geometry">
-                <rect>
-                    <x>690</x>
-                    <y>660</y>
-                    <width>61</width>
-                    <height>20</height>
-                </rect>
-            </property>
-            <property    name="maximumSize">
-                <size>
-                    <width>120</width>
-                    <height>20</height>
-                </size>
-            </property>
-            <property    name="text">
-                <string>反平返利</string>
-            </property>
-        </widget>
-    </widget>
-    <layoutdefault    spacing="6"    margin="11"/>
-    <tabstops>
-        <tabstop>productNameLineEdit</tabstop>
-        <tabstop>typeComboBox</tabstop>
-        <tabstop>settlementDateEdit</tabstop>
-        <tabstop>maturityDateEdit</tabstop>
-        <tabstop>callScaleLineEdit</tabstop>
-        <tabstop>callTypeComboBox</tabstop>
-        <tabstop>putScaleLineEdit</tabstop>
-        <tabstop>putTypeComboBox</tabstop>
-        <tabstop>scaleUnitComboBox</tabstop>
-        <tabstop>callExecPricePercentLineEdit</tabstop>
-        <tabstop>putExecPricePercentLineEdit</tabstop>
-        <tabstop>initialPriceLineEdit</tabstop>
-        <tabstop>yieldLineEdit</tabstop>
-        <tabstop>averagePriceLineEdit</tabstop>
-        <tabstop>rateLineEdit</tabstop>
-        <tabstop>barrierLineEdit</tabstop>
-        <tabstop>openNumsLineBox</tabstop>
-        <tabstop>instrumentCodeLineEdit</tabstop>
-        <tabstop>hedgeVolLineEdit</tabstop>
-        <tabstop>startTimeEdit</tabstop>
-        <tabstop>carryNoonTimeEdit</tabstop>
-        <tabstop>carryNoonDistanceSpinBox</tabstop>
-        <tabstop>carryNightTimeEdit</tabstop>
-        <tabstop>carryNightDistanceSpinBox</tabstop>
-        <tabstop>save</tabstop>
-        <tabstop>cancle</tabstop>
-    </tabstops>
-    <resources/>
-    <connections/>
+   </property>
+   <property name="text">
+    <string>对冲阈值</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="tickValue">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>420</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>2</number>
+   </property>
+   <property name="maximum">
+    <double>1000.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.010000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="tickValue_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>420</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>2</number>
+   </property>
+   <property name="maximum">
+    <double>1000.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.010000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="tickValue_3">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>420</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>2</number>
+   </property>
+   <property name="maximum">
+    <double>1000.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.010000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="tickValue_4">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>420</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>2</number>
+   </property>
+   <property name="maximum">
+    <double>1000.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.010000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_23">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>420</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约价值</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_24">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>420</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约价值</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_39">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>420</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>80</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>合约价值</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="hedgeThresHoldSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>290</y>
+     <width>42</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>9999</number>
+   </property>
+   <property name="displayIntegerBase">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_40">
+   <property name="geometry">
+    <rect>
+     <x>724</x>
+     <y>290</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>已经计算均值点</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="averagedPoint">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>290</y>
+     <width>42</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>9999</number>
+   </property>
+   <property name="displayIntegerBase">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_41">
+   <property name="geometry">
+    <rect>
+     <x>514</x>
+     <y>290</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>合计均值点</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="totalAveragePoint">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>290</y>
+     <width>42</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>9999</number>
+   </property>
+   <property name="displayIntegerBase">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>202</x>
+     <y>90</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>FirstAveragePoint</string>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="firstApointDateEdit">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>91</y>
+     <width>194</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="onSearchPushButton">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>20</y>
+     <width>75</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>562</x>
+     <y>90</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>nextAverageTime</string>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="nextApointDateEdit">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>91</y>
+     <width>194</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_42">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>460</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>交易成本(%)</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="TradeCostDSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>460</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>-99.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>99.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="riskAversionDSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>460</y>
+     <width>62</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="decimals">
+    <number>3</number>
+   </property>
+   <property name="minimum">
+    <double>-99.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>99.000000000000000</double>
+   </property>
+   <property name="singleStep">
+    <double>0.001000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_43">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>460</y>
+     <width>120</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>风险厌恶系数</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="statusComboBox">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>660</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>存续</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>已到期</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>已平仓</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_46">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>720</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>产品交付日</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="counterpartyLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>690</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="deliveryPriceLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>690</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="paymentDateEdit">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>720</y>
+     <width>194</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_48">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>720</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>PresentValue</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="TradeValueLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>720</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_25">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>690</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>交易对手</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="PresentValueEdit">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>720</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_45">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>660</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>当前状态</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_47">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>720</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>TradeValue</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_44">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>690</y>
+     <width>51</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>交割价</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="optionFeeLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>690</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="onSettlePushButton">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>620</y>
+     <width>75</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>结算</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_18">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>690</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>期权费(单价)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_49">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>660</y>
+     <width>51</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>P&amp;L</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="PNLLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>660</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_50">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>660</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>当日结算价</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="settlePriceLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>660</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="deliveryDateEdit">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>750</y>
+     <width>194</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_51">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>750</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>产品交割日</string>
+   </property>
+  </widget>
+  <widget class="QDateTimeEdit" name="terminateDateEdit">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>750</y>
+     <width>194</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_52">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>750</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>产品终止日</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="returnProfitLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>660</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>140</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_53">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>660</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>120</width>
+     <height>20</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>反平返利</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>productNameLineEdit</tabstop>
+  <tabstop>typeComboBox</tabstop>
+  <tabstop>settlementDateEdit</tabstop>
+  <tabstop>maturityDateEdit</tabstop>
+  <tabstop>callScaleLineEdit</tabstop>
+  <tabstop>callTypeComboBox</tabstop>
+  <tabstop>putScaleLineEdit</tabstop>
+  <tabstop>putTypeComboBox</tabstop>
+  <tabstop>scaleUnitComboBox</tabstop>
+  <tabstop>callExecPricePercentLineEdit</tabstop>
+  <tabstop>putExecPricePercentLineEdit</tabstop>
+  <tabstop>initialPriceLineEdit</tabstop>
+  <tabstop>yieldLineEdit</tabstop>
+  <tabstop>averagePriceLineEdit</tabstop>
+  <tabstop>rateLineEdit</tabstop>
+  <tabstop>barrierLineEdit</tabstop>
+  <tabstop>openNumsLineBox</tabstop>
+  <tabstop>instrumentCodeLineEdit</tabstop>
+  <tabstop>hedgeVolLineEdit</tabstop>
+  <tabstop>startTimeEdit</tabstop>
+  <tabstop>carryNoonTimeEdit</tabstop>
+  <tabstop>carryNoonDistanceSpinBox</tabstop>
+  <tabstop>carryNightTimeEdit</tabstop>
+  <tabstop>carryNightDistanceSpinBox</tabstop>
+  <tabstop>save</tabstop>
+  <tabstop>cancle</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
 </ui>

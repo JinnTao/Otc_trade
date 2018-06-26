@@ -1175,7 +1175,11 @@ void QStrategyThread::bookFresh(){
  curTimeTic = dateTime2unix(iYear,iMonth,iDay,iHour,iMinute,iSecond);/// 当前时间转换成时间戳
  
  string snextAverageStartDate = this->nextAveragePoint.toString("yyyyMMdd").toStdString();
-
+ if(underlyingPrice == 0){
+     emit strategyMsg(this->productName + " no data, run for get.");
+    return ;
+ 
+ }
  switch (this->optionType)
  {
  case 0:
@@ -1190,7 +1194,7 @@ void QStrategyThread::bookFresh(){
    if(curTimeTic > this->nextAveragePoint.toTime_t()){
      this->m_averagedPointAdjust = this->averagedPoint + 1;
      this->m_averagePriceAdjust = (this->averagePrice * this->averagedPoint + underlyingPrice)/double(this->m_averagedPointAdjust );
-     if(this->m_averagedPointAdjust < this->totalAveragePoint){
+     if(this->m_averagedPointAdjust <= this->totalAveragePoint){
       auto iter  =  this->m_workDay.find(snextAverageStartDate);
       iter++;
 
@@ -1198,6 +1202,9 @@ void QStrategyThread::bookFresh(){
        QDateTime nextTradeDate = QDateTime::fromString(nextAveragePointPlusone,"yyyyMMdd");
        nextTradeDate.setTime(QTime(15,0,0));
        this->nextAveragePoint = nextTradeDate;
+     }else{
+         // this states book should over.     averagedPoint >=  totalPoint
+        break;
      }
     QString saveproductName = QString("output/product/") + this->productName + QString(".ini") ;
     QSettings *configIniWrite = new QSettings(saveproductName, QSettings::IniFormat); 
@@ -1223,49 +1230,56 @@ void QStrategyThread::bookFresh(){
 }
 
 void QStrategyThread::settlePrintToExcel(bool saveToExcel){
-   QString msg;
- // print message
- emit strategyMsg("BOOK: " + this->productName + " Inst: "  + this->instrumentCode + "PNL: " +
- QString::number( this->m_PNL,'f',2) + " TradeValue: " + QString::number(this->m_tradeValue,'f',2) + " PV :" + QString::number(this->m_presentValue,'f',2));
 
- time_t t = time(0);
- char tmp[64];
- strftime( tmp, sizeof(tmp), "%Y%m%d",localtime(&t) ); 
- string today(tmp);
- string callPut = "put";
- double strike = this->m_putExerPrice;
- string optionStyle[7] = {"euro","american","asian","barrier","binary","lookback","forward"};
- if(this->callScale >0){
-  callPut = "call";
-  strike = this->m_callExerPrice;
- }
- if(this->optionType ==6){
-  strike = this->m_initialPrice;
- }
-
- if(saveToExcel){
-  // 后期 考虑保存到数据库中
-  ofstream output;
-  output.open("output/settle/settle_"+today+".csv",ios::_Nocreate | ios::ate) ;
-  if(output){
-  //content
-  output << today << ","  << this->productName.toStdString() << ","<< this->instrumentCode.toStdString() <<"," << this->m_bookStatus<< "," << this->m_PNL << ","<< this->m_tradeValue << "," << this->m_presentValue << ","  <<  optionStyle[this->optionType] 
-  << "," << callPut << "," << this->callScale + this->putScale << ","<< this->m_settleTau << "," << this->hedgeVolability << "," << strike << "," << this->m_daySettlePrice << ","
-  << this->interest << "," << this->dividend << "," << this->averagePrice << "," <<this->totalAveragePoint  << "," << this->averagedPoint << ","
-  << this->m_settleT1   << endl;
-  }else{
-  // title
-  output.open("output/settle/settle_"+today+".csv", ios::app);
-  output << "DATE" << ","  << "BOOKID"<<","<< "INST"  << "," << "STATUS" << "," << "PNL" <<","<< "TV" << "," << "PV" << ","  <<  "TYPE" << "," << "CALLPUT" << "," << "SCALE" << ","<< "T" << "," << "HV" << "," << "K" 
-  << "," << "SETTLEPRICE" << ","<< "RATE" << "," << "COSTOFCARRY" << "," << "AVERAGEPRICE" << "," << "M"  << "," << "N" << "," <<   "T1"   << endl;
-  output << today << ","  << this->productName.toStdString() << ","<< this->instrumentCode.toStdString() <<"," << this->m_bookStatus<< "," << this->m_PNL << ","<< this->m_tradeValue << "," << this->m_presentValue << ","  <<  optionStyle[this->optionType] 
-  << "," << callPut << "," << this->callScale + this->putScale << ","<< this->m_settleTau << "," << this->hedgeVolability << "," << strike << "," << this->m_daySettlePrice << ","
-  << this->interest << "," << this->dividend << "," << this->averagePrice << "," <<this->totalAveragePoint  << "," << this->averagedPoint << ","
-  << this->m_settleT1   << endl;
-  
-  }
-  output.close();
+    //===================标的路径Price==================================
+    double  underlyingPrice = 0;
+    for (auto i = this->m_instrumentList.begin();i!=this->m_instrumentList.end();i++){
+    underlyingPrice += instrumentMarketData[i->instrumentCode].LastPrice * i->ratio;
+    }
  
- }
+    QString msg;
+    // print message
+    emit strategyMsg("BOOK: " + this->productName + " Inst: "  + this->instrumentCode + "PNL: " +
+    QString::number( this->m_PNL,'f',2) + " TradeValue: " + QString::number(this->m_tradeValue,'f',2) + " PV :" + QString::number(this->m_presentValue,'f',2));
+
+    time_t t = time(0);
+    char tmp[64];
+    strftime( tmp, sizeof(tmp), "%Y%m%d",localtime(&t) ); 
+    string today(tmp);
+    string callPut = "put";
+    double strike = this->m_putExerPrice;
+    string optionStyle[7] = {"euro","american","asian","barrier","binary","lookback","forward"};
+    if(this->callScale >0){
+    callPut = "call";
+    strike = this->m_callExerPrice;
+    }
+    if(this->optionType ==6){
+    strike = this->m_initialPrice;
+    }
+
+    if(saveToExcel){
+    // 后期 考虑保存到数据库中
+    ofstream output;
+    output.open("output/settle/settle_"+today+".csv",ios::_Nocreate | ios::ate) ;
+    if(output){
+    //content
+    output << today << ","  << this->productName.toStdString() << ","<< this->instrumentCode.toStdString() <<"," << this->m_bookStatus<< "," << this->m_PNL << ","<< this->m_tradeValue << "," << this->m_presentValue << ","  <<  optionStyle[this->optionType] 
+    << "," << callPut << "," << this->callScale + this->putScale << ","<< this->m_settleTau << "," << this->hedgeVolability << "," << strike << "," << this->m_daySettlePrice << ","
+    << this->interest << "," << this->dividend << "," << this->averagePrice << ","<< underlyingPrice<< "," <<this->totalAveragePoint  << "," << this->averagedPoint << ","
+    << this->m_settleT1   << endl;
+    }else{
+    // title
+    output.open("output/settle/settle_"+today+".csv", ios::app);
+    output << "DATE" << ","  << "BOOKID"<<","<< "INST"  << "," << "STATUS" << "," << "PNL" <<","<< "TV" << "," << "PV" << ","  <<  "TYPE" << "," << "CALLPUT" << "," << "SCALE" << ","<< "T" << "," << "HV" << "," << "K" 
+    << "," << "SETTLEPRICE" << ","<< "RATE" << "," << "COSTOFCARRY" << "," << "AVERAGE_PRICE" <<","<< "CLOSE_PRICE"<< "," << "M"  << "," << "N" << "," <<   "T1"   << endl;
+    output << today << ","  << this->productName.toStdString() << ","<< this->instrumentCode.toStdString() <<"," << this->m_bookStatus<< "," << this->m_PNL << ","<< this->m_tradeValue << "," << this->m_presentValue << ","  <<  optionStyle[this->optionType] 
+    << "," << callPut << "," << this->callScale + this->putScale << ","<< this->m_settleTau << "," << this->hedgeVolability << "," << strike << "," << this->m_daySettlePrice << ","
+        << this->interest << "," << this->dividend << "," << this->averagePrice << ","<< underlyingPrice<< "," <<this->totalAveragePoint  << "," << this->averagedPoint << ","
+    << this->m_settleT1   << endl;
+  
+    }
+    output.close();
+ 
+    }
 
 }

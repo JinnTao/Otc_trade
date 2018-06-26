@@ -1,4 +1,4 @@
-# OTCTrade
+﻿# OTCTrade
 ## 序言
 
 + 这个项目是在2015年开发的，一直用到现在，原来很乱的结构，做了很多简化，现在整体来看并不是很多。但是每次回头过来看，我还是会看不懂，以前为什么会这么写，这个原因就像我朋友说的，每次都是没有一个总结，所以才导致的问题么？（我也想和你们一起玩 - JinnTao）OTC Trade：用于场外衍生品实时交易、管理、结算。
@@ -34,7 +34,7 @@ cd build && cmake -G"Visual Studio 11 2012" -DCMAKE_PREFIX_PATH="/path/to/Qt5"
 + 2、dll文件 复制到项目中
 + 3、项目中创建流文件夹 MDflow TDflow
 + 4、创建output/product output/settle output/tradeList 文件夹
-+ 5、修改input账户信息，运行OTCTrade.exe。
++ 5、修改input账户信息，将easylog.conf文件复制到项目目录中，运行OTCTrade.exe。
 
 ## 结算
 + 每日结算时间点(15：00)后，复制settle中文件到 excel文件夹 settle.xlsx 中，这部分主要用于场外结算，再把场内交易流水按excel中要求的格式导入。最后在settle.xlsx 中OTC.sheet可以查看的到总的对冲后损益。

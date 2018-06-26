@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.8)
 project(OTCTrade)
 
 #below for QT
-set(CMAKE_PREFIX_PATH "D:\\Qt\\Qt5.2.0\\5.2.0\\msvc2012")
+#set(CMAKE_PREFIX_PATH "D:\\Qt\\Qt5.2.0\\5.2.0\\msvc2012")
 
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)

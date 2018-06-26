@@ -1,28 +1,28 @@
-#pragma    once
+#pragma once
 
-#include    "europeanPrice.h"
-#include    "americanPrice.h"
-#include    "asianPrice.h"
-#include    "digital.h"
-#include    "barrierPrice.h"
+#include "europeanPrice.h"
+#include "americanPrice.h"
+#include "asianPrice.h"
+#include "digital.h"
+#include "barrierPrice.h"
 
-using    namespace    std;
+using namespace std;
 
 
-class    DLL_API_CLASS        option
-//class    option
+class DLL_API_CLASS  option
+//class option
 {
 public:
-                option();
+    option();
 
-                ~option(void);
-                europeanPrice    europeanPtr;
-                americanPrice    americanPtr;
-                asianPrice                        asianPtr;
-                barrierPrice                barrierPtr;
-                americanDigital    americanDigitalPtr;
-                europeanDigital    europeanDigitalPtr;
+    ~option(void);
+    europeanPrice europeanPtr;
+    americanPrice americanPtr;
+    asianPrice      asianPtr;
+    barrierPrice    barrierPtr;
+    americanDigital americanDigitalPtr;
+    europeanDigital europeanDigitalPtr;
 
 private:
-    
+ 
 };

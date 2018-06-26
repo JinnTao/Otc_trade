@@ -1,4 +1,4 @@
-#include    "structure.h"
+#include "structure.h"
 
 structure::structure(void)
 {
