@@ -5,7 +5,6 @@
 #include <QDateTime>
 #include <traderspi.h>
 #include "ctpcontrol.h"
-//#include "optionController.h"
 #include "qOrderManager.h"
 //#include "asianPrice.h"
 //#include "bjsmodel.h"

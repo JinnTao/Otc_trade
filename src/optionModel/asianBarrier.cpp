@@ -64,13 +64,7 @@ OptionValue asianBarrier::price(OptionType type, double S0,double K,double A,dou
            price = meanPrice(0) * std::exp(-r * T); 
 
        }
-
-
        return price;
-
-
-
-
    
    }
 }

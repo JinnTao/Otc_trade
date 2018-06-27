@@ -1,1 +1,1 @@
-cd build && cmake -G "Visual Studio 11 2012" -DCMAKE_PREFIX_PATH="D:\\Qt\\Qt5.2.0\\5.2.0\\msvc2012"
+cd build && cmake -G "Visual Studio 11 2012" -DCMAKE_PREFIX_PATH="D:\\Qt\\Qt5.2.0\\5.2.0\\msvc2012" ..
