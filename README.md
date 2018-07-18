@@ -1,12 +1,12 @@
-ï»¿# OTCTrade
-## åºè¨€
+# OTCTrade
+## ÐòÑÔ
 
-+ è¿™ä¸ªé¡¹ç›®æ˜¯åœ¨2015å¹´å¼€å‘çš„ï¼Œä¸€ç›´ç”¨åˆ°çŽ°åœ¨ï¼ŒåŽŸæ¥å¾ˆä¹±çš„ç»“æž„ï¼Œåšäº†å¾ˆå¤šç®€åŒ–ï¼ŒçŽ°åœ¨æ•´ä½“æ¥çœ‹å¹¶ä¸æ˜¯å¾ˆå¤šã€‚ä½†æ˜¯æ¯æ¬¡å›žå¤´è¿‡æ¥çœ‹ï¼Œæˆ‘è¿˜æ˜¯ä¼šçœ‹ä¸æ‡‚ï¼Œä»¥å‰ä¸ºä»€ä¹ˆä¼šè¿™ä¹ˆå†™ï¼Œè¿™ä¸ªåŽŸå› å°±åƒæˆ‘æœ‹å‹è¯´çš„ï¼Œæ¯æ¬¡éƒ½æ˜¯æ²¡æœ‰ä¸€ä¸ªæ€»ç»“ï¼Œæ‰€ä»¥æ‰å¯¼è‡´çš„é—®é¢˜ä¹ˆï¼Ÿï¼ˆæˆ‘ä¹Ÿæƒ³å’Œä½ ä»¬ä¸€èµ·çŽ© - JinnTaoï¼‰OTC Tradeï¼šç”¨äºŽåœºå¤–è¡ç”Ÿå“å®žæ—¶äº¤æ˜“ã€ç®¡ç†ã€ç»“ç®—ã€‚
++ Õâ¸öÏîÄ¿ÊÇÔÚ2015Äê¿ª·¢µÄ£¬Ò»Ö±ÓÃµ½ÏÖÔÚ£¬Ô­À´ºÜÂÒµÄ½á¹¹£¬×öÁËºÜ¶à¼ò»¯£¬ÏÖÔÚÕûÌåÀ´¿´²¢²»ÊÇºÜ¶à¡£µ«ÊÇÃ¿´Î»ØÍ·¹ýÀ´¿´£¬ÎÒ»¹ÊÇ»á¿´²»¶®£¬ÒÔÇ°ÎªÊ²Ã´»áÕâÃ´Ð´£¬Õâ¸öÔ­Òò¾ÍÏñÎÒÅóÓÑËµµÄ£¬Ã¿´Î¶¼ÊÇÃ»ÓÐÒ»¸ö×Ü½á£¬ËùÒÔ²Åµ¼ÖÂµÄÎÊÌâÃ´£¿£¨ÎÒÒ²ÏëºÍÄãÃÇÒ»ÆðÍæ - JinnTao£©OTC Trade£ºÓÃÓÚ³¡ÍâÑÜÉúÆ·ÊµÊ±½»Ò×¡¢¹ÜÀí¡¢½áËã¡£
 
-## ä¸‹è½½
-+ [Armadillo](http://arma.sourceforge.net/)ï¼šC++ä¸‹çš„Matlabæ›¿ä»£å“,ç”¨äºŽC++çŸ©é˜µè¿ç®—åº“ï¼Œå¯¹äºŽé€‚åˆmatlabçš„äººæ¥è¯´ï¼Œæ˜¯éžå¸¸æ–¹ä¾¿çš„ï¼Œé…ç½®æ–¹å¼è¯¦è§å®˜æ–¹æ–‡æ¡£ã€‚
+## ÏÂÔØ
++ [Armadillo](http://arma.sourceforge.net/)£ºC++ÏÂµÄMatlabÌæ´úÆ·,ÓÃÓÚC++¾ØÕóÔËËã¿â£¬¶ÔÓÚÊÊºÏmatlabµÄÈËÀ´Ëµ£¬ÊÇ·Ç³£·½±ãµÄ£¬ÅäÖÃ·½Ê½Ïê¼û¹Ù·½ÎÄµµ¡£
 
-+ [Oracle Oci](http://www.oracle.com/technetwork/database/database-technologies/instant-client/overview/index.html)ï¼šä¸»è¦ç”¨äºŽc++è¿žæŽ¥æ•°æ®åº“çš„æ”¯æŒåŒ…ï¼Œæ³¨æ„tnsnames.oraçš„é…ç½®ï¼Œ[ODBCé…ç½®](https://www.cnblogs.com/shelvenn/p/3799849.html)è¯¥æ•™ç¨‹ä¸ºäº†ä¸»è¦æ˜¯é’ˆå¯¹excelè¿žæŽ¥oracleè¿›è¡Œæµ‹è¯•ç”¨çš„ï¼Œå¦‚ä¸‹ï¼š
++ [Oracle Oci](http://www.oracle.com/technetwork/database/database-technologies/instant-client/overview/index.html)£ºÖ÷ÒªÓÃÓÚc++Á¬½ÓÊý¾Ý¿âµÄÖ§³Ö°ü£¬×¢Òâtnsnames.oraµÄÅäÖÃ£¬[ODBCÅäÖÃ](https://www.cnblogs.com/shelvenn/p/3799849.html)¸Ã½Ì³ÌÎªÁËÖ÷ÒªÊÇÕë¶ÔexcelÁ¬½Óoracle½øÐÐ²âÊÔÓÃµÄ£¬ÈçÏÂ£º
 ```
     ysptestdb = 
        (DESCRIPTION = 
@@ -17,27 +17,28 @@
          ) 
        )
 ```
-+ [QT5.2](https://mirror.tuna.tsinghua.edu.cn/qt/development_releases/qt/5.2/5.2.0-rc1/) ï¼šä¸‹è½½qt5.2
++ [QT5.2](https://mirror.tuna.tsinghua.edu.cn/qt/development_releases/qt/5.2/5.2.0-rc1/) £ºÏÂÔØqt5.2
 
-+ thirdï¼šåœ¨è¯¥æ–‡ä»¶å¤¹ä¸­å·²ç»ä¸‹è½½å¥½ä¸Šè¿°æ–‡ä»¶ï¼Œä¸æƒ³é‡æ–°é…ç½®å¯ä»¥ç›´æŽ¥ç”¨ï¼Œåªæ˜¯githubçš„ä¸‹è½½ä¼šæ¯”è¾ƒéº»çƒ¦ã€‚
++ third£ºÔÚ¸ÃÎÄ¼þ¼ÐÖÐÒÑ¾­ÏÂÔØºÃÉÏÊöÎÄ¼þ£¬²»ÏëÖØÐÂÅäÖÃ¿ÉÒÔÖ±½ÓÓÃ£¬Ö»ÊÇgithubµÄÏÂÔØ»á±È½ÏÂé·³¡£
 
-## æž„å»º
-* 1ã€åˆ›å»ºbuildæ–‡ä»¶å¤¹
-* 2ã€CMAKE 
+## ¹¹½¨
+* 1¡¢´´½¨buildÎÄ¼þ¼Ð
+* 2¡¢CMAKE 
 ```
 cd build && cmake -G"Visual Studio 11 2012" -DCMAKE_PREFIX_PATH="/path/to/Qt5"
 ```
-* 3ã€æ‰“å¼€buildä¸‹slnæ–‡ä»¶ è¿›å…¥Vs2012ç¼–è¯‘
+* 3¡¢´ò¿ªbuildÏÂslnÎÄ¼þ ½øÈëVs2012±àÒë
 
-## è¿è¡Œ
-+ 1ã€resources/input æ–‡ä»¶æ”¾åœ¨é¡¹ç›®ä¸­
-+ 2ã€dllæ–‡ä»¶ å¤åˆ¶åˆ°é¡¹ç›®ä¸­
-+ 3ã€é¡¹ç›®ä¸­åˆ›å»ºæµæ–‡ä»¶å¤¹ MDflow TDflow
-+ 4ã€åˆ›å»ºoutput/product output/settle output/tradeList æ–‡ä»¶å¤¹
-+ 5ã€ä¿®æ”¹inputè´¦æˆ·ä¿¡æ¯ï¼Œå°†easylog.confæ–‡ä»¶å¤åˆ¶åˆ°é¡¹ç›®ç›®å½•ä¸­ï¼Œè¿è¡ŒOTCTrade.exeã€‚
+## ÔËÐÐ
++ 1¡¢resources/input ÎÄ¼þ·ÅÔÚÏîÄ¿ÖÐ
++ 2¡¢dllÎÄ¼þ ¸´ÖÆµ½ÏîÄ¿ÖÐ
++ 3¡¢ÏîÄ¿ÖÐ´´½¨Á÷ÎÄ¼þ¼Ð MDflow TDflow
++ 4¡¢´´½¨output/product output/settle output/tradeList ÎÄ¼þ¼Ð
++ 5¡¢ÐÞ¸ÄinputÕË»§ÐÅÏ¢£¬½«easylog.confÎÄ¼þ¸´ÖÆµ½ÏîÄ¿Ä¿Â¼ÖÐ£¬ÔËÐÐOTCTrade.exe¡£
++ 6¡¢×¢ÒâÓ¦ÔÚDebug»·¾³ÏÂµ÷ÊÔ£¬releaseµÄ»·¾³×¢Òâ£¨tdcpi\mdcpi£©£»ÐèÒª½«OT binÂ·¾¶¼ÓÈëµ½»·¾³±äÁ¿ÖÐ
 
-## ç»“ç®—
-+ æ¯æ—¥ç»“ç®—æ—¶é—´ç‚¹(15ï¼š00)åŽï¼Œå¤åˆ¶settleä¸­æ–‡ä»¶åˆ° excelæ–‡ä»¶å¤¹ settle.xlsx ä¸­ï¼Œè¿™éƒ¨åˆ†ä¸»è¦ç”¨äºŽåœºå¤–ç»“ç®—ï¼Œå†æŠŠåœºå†…äº¤æ˜“æµæ°´æŒ‰excelä¸­è¦æ±‚çš„æ ¼å¼å¯¼å…¥ã€‚æœ€åŽåœ¨settle.xlsx ä¸­OTC.sheetå¯ä»¥æŸ¥çœ‹çš„åˆ°æ€»çš„å¯¹å†²åŽæŸç›Šã€‚
+## ½áËã
++ Ã¿ÈÕ½áËãÊ±¼äµã(15£º00)ºó£¬¸´ÖÆsettleÖÐÎÄ¼þµ½ excelÎÄ¼þ¼Ð settle.xlsx ÖÐ£¬Õâ²¿·ÖÖ÷ÒªÓÃÓÚ³¡Íâ½áËã£¬ÔÙ°Ñ³¡ÄÚ½»Ò×Á÷Ë®°´excelÖÐÒªÇóµÄ¸ñÊ½µ¼Èë¡£×îºóÔÚsettle.xlsx ÖÐOTC.sheet¿ÉÒÔ²é¿´µÄµ½×ÜµÄ¶Ô³åºóËðÒæ¡£
 
-## æœªæ¥
-+ ç¼ºå°‘Riskå’ŒScenario analysisçš„æŠ¥è¡¨å¯¼å‡ºï¼ŒåŽæœŸç»´æŠ¤äººå‘˜åœ¨ç†Ÿæ‚‰ç³»ç»Ÿåº•å±‚çš„æƒ…å†µä¸‹ï¼Œå¯ä»¥ç€é‡å¼€å‘è¿™äº›åŠŸèƒ½ï¼Œæ­¤å¤–æŒ‰å®žé™…æƒ…å†µåœ¨æœªæ¥é‡æž„æ•´ä¸ªç³»ç»Ÿï¼ˆæˆ‘ä¹Ÿä¸€ç›´æƒ³é‡æž„ï¼Œå¯ä¸€ç›´æ²¡æœ‰å®Œæ•´çš„æ—¶é—´åŽ»åšï¼‰ï¼Œåœ¨åº•å±‚ä¸Šåšæ›´å¥½çš„ä¼˜åŒ–ã€‚
+## Î´À´
++ È±ÉÙRiskºÍScenario analysisµÄ±¨±íµ¼³ö£¬ºóÆÚÎ¬»¤ÈËÔ±ÔÚÊìÏ¤ÏµÍ³µ×²ãµÄÇé¿öÏÂ£¬¿ÉÒÔ×ÅÖØ¿ª·¢ÕâÐ©¹¦ÄÜ£¬´ËÍâ°´Êµ¼ÊÇé¿öÔÚÎ´À´ÖØ¹¹Õû¸öÏµÍ³£¨ÎÒÒ²Ò»Ö±ÏëÖØ¹¹£¬¿ÉÒ»Ö±Ã»ÓÐÍêÕûµÄÊ±¼äÈ¥×ö£©£¬ÔÚµ×²ãÉÏ×ö¸üºÃµÄÓÅ»¯¡£
