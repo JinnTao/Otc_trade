@@ -1212,6 +1212,8 @@ void QStrategyThread::bookFresh(){
     configIniWrite->setValue("/OptionParam/nextAveragePoint",nextAveragePoint.toString("yyyy-MM-ddThh:mm:ss"));
     configIniWrite->setValue("/OptionParam/averagedPoint",m_averagedPointAdjust);
     configIniWrite->setValue("/OptionParam/averagePrice",m_averagePriceAdjust);
+    this->averagedPoint =   m_averagedPointAdjust;
+    this->averagePrice = m_averagePriceAdjust;
     delete configIniWrite;
    }
   }

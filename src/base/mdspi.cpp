@@ -55,25 +55,25 @@ void CtpMdSpi::ReqUserLogin(TThostFtdcBrokerIDType appId,
  strcpy(req.BrokerID, appId);
  strcpy(req.UserID, userId);
  strcpy(req.Password, passwd);
-#ifdef _DEBUG
+//#ifdef _DEBUG
 
  int ret = m_pUserApi_md->ReqUserLogin(&req, ++requestId);
  //int ret = ccbf_MdFuncInterface(m_pUserApi_md,appId,userId,passwd,requestId);
  cerr<<"MD 请求 | 发送登录..."<<((ret == 0) ? "成功" :"失败") << endl; 
 
-#else
- HINSTANCE hInst = LoadLibrary(TEXT("dll_FBI_Release_Win32.dll"));
- DWORD errorID = GetLastError();
- ccbf_secureApi_LoginMd ccbf_MdFuncInterface = (ccbf_secureApi_LoginMd)GetProcAddress(hInst,"ccbf_secureApi_LoginMd_After_CTP_OnConnected");
- if(!ccbf_MdFuncInterface){
-  cerr << " DLL Interface Error" << endl;
- }else{
-  //int ret = m_pUserApi_md->ReqUserLogin(&req, ++requestId);
-  int ret = ccbf_MdFuncInterface(m_pUserApi_md,appId,userId,passwd,requestId);
-  cerr<<"MD 请求 | 发送登录..."<<((ret == 0) ? "成功" :"失败") << endl; 
- }
-
-#endif
+//#else
+// HINSTANCE hInst = LoadLibrary(TEXT("dll_FBI_Release_Win32.dll"));
+// DWORD errorID = GetLastError();
+// ccbf_secureApi_LoginMd ccbf_MdFuncInterface = (ccbf_secureApi_LoginMd)GetProcAddress(hInst,"ccbf_secureApi_LoginMd_After_CTP_OnConnected");
+// if(!ccbf_MdFuncInterface){
+//  cerr << " DLL Interface Error" << endl;
+// }else{
+//  //int ret = m_pUserApi_md->ReqUserLogin(&req, ++requestId);
+//  int ret = ccbf_MdFuncInterface(m_pUserApi_md,appId,userId,passwd,requestId);
+//  cerr<<"MD 请求 | 发送登录..."<<((ret == 0) ? "成功" :"失败") << endl; 
+// }
+//
+//#endif
  SetEvent(g_hEvent);
 }
 
